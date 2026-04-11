@@ -2,17 +2,13 @@ public class Solution
 {
     public int[] NumberGame(int[] nums) 
     {
-        List<int> list = new List<int>(nums);
-        List<int> numbers = [];
-        while(list.Count > 0)
-        {
-            int p = list.Min();
-            list.Remove(p); 
-            int q = list.Min();
-            list.Remove(q);
-            numbers.Add(q);
-            numbers.Add(p);
-        }   
-        return numbers.ToArray();
+       Array.Sort(nums);
+       for(int i=0; i<nums.Length; i+=2)
+       {
+            int temp  = nums[i];
+            nums[i]   = nums[i+1]; 
+            nums[i+1] = temp;
+       }
+       return nums;
     }
 }
