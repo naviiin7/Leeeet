@@ -1,10 +1,17 @@
-public class Solution {
-    public bool IsPowerOfThree(int n) {
-        for (int i = 0; i <= 19; i++) {
-            if (Math.Pow(3, i) == n) {
-                return true;
-            }
+public class Solution 
+{
+    public bool IsPowerOfThree(int n) 
+    {
+        if(n<1) 
+            return false;
+        while(n%3 == 0)
+        {
+            n=n/3;
+
         }
-        return false; 
+
+    return(n==1);
+
     }
+           
 }
