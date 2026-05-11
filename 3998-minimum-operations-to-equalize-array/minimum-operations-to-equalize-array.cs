@@ -7,11 +7,8 @@ public class Solution
         var set = nums.ToHashSet();    
 
         if(set.Count == 1)
-         {   return 0;   }
-
-
-        else 
-           {return 1;} 
+            return 0;
+        return 1;
         
     }
 }
