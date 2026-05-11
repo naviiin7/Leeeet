@@ -1,14 +1,17 @@
 public class Solution 
 {
 
+
     public int MinOperations(int[] nums)
     {
-        int len = nums.Length;
-        var set = nums.ToHashSet();    
-
-        if(set.Count == 1)
-            return 0;
-        return 1;
+        bool flag = true;
+        for(int i=1; i<nums.Length; i++)
+        {
+            if(nums[0] != nums[i])
+                flag = false;
+                
+        }
+        return flag ? 0 : 1; 
         
     }
 }
